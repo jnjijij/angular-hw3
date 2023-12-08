@@ -1,0 +1,22 @@
+<!-- app.component.html -->
+<h1>Car Information</h1>
+<div>
+    <label for="make">Make: </label>
+    <input [(ngModel)]="newCar.make" id="make" />
+</div>
+<div>
+    <label for="year">Year: </label>
+    <input [(ngModel)]="newCar.year" type="number" id="year" />
+</div>
+<div>
+    <label for="price">Price: </label>
+    <input [(ngModel)]="newCar.price" type="number" id="price" />
+</div>
+<div>
+    <button (click)="addCar()">Add Car</button>
+</div>
+<hr />
+<div *ngFor="let car of cars" class="car-item">
+
+
+</div>
