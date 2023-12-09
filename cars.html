@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        .car-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+
+        .car-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Car Information</h1>
+
+
+<form>
+    <label for="make">Make: </label>
+    <input [(ngModel)]="newCar.make" id="make" />
+
+    <label for="year">Year: </label>
+    <input [(ngModel)]="newCar.year" type="number" id="year" />
+
+    <label for="price">Price: </label>
+    <input [(ngModel)]="newCar.price" type="number" id="price" />
+
+    <button type="button" (click)="addCar()">Add Car</button>
+</form>
+
+<hr />
+
+<div *ngFor="let car of cars" class="car-item">
+    <p><strong>Make:</strong> {{ car.make }}</p>
+    <p><strong>Year:</strong> {{ car.year }}</p>
+    <p><strong>Price:</strong> ${{ car.price }}</p>
+</div>
+
+</body>
+</html>
+
+
