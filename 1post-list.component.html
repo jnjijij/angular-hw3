@@ -1,0 +1,4 @@
+<div *ngFor="let post of posts">
+    <p>{{ post.title }}</p>
+    <button (click)="showPostDetails(post)">Show Details</button>
+</div>
