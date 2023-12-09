@@ -1,0 +1,24 @@
+<h1>Car Information</h1>
+
+<!-- Додаємо форму для введення даних -->
+<form>
+  <label for="make">Make: </label>
+  <input [(ngModel)]="newCar.make" id="make" />
+
+  <label for="year">Year: </label>
+  <input [(ngModel)]="newCar.year" type="number" id="year" />
+
+  <label for="price">Price: </label>
+  <input [(ngModel)]="newCar.price" type="number" id="price" />
+
+  <button type="button" (click)="addCar()">Add Car</button>
+</form>
+
+<hr />
+
+<!-- Виведення введених даних -->
+<div *ngFor="let car of cars" class="car-item">
+  <p><strong>Make:</strong> {{ car.make }}</p>
+  <p><strong>Year:</strong> {{ car.year }}</p>
+  <p><strong>Price:</strong> ${{ car.price }}</p>
+</div>
