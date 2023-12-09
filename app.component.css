@@ -1,0 +1,19 @@
+/* app.component.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.car-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.car-item p {
+    margin: 5px 0;
+}
